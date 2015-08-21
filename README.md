@@ -18,6 +18,16 @@ it is linked by running
 docker run -d -p 8000:80 --volumes-from myapp-data iiiepe/nginx-drupal
 
 
+how to create a mariadb container
+
+docker run --name some-mariadb -e MYSQL_ROOT_PASSWORD=mysecretpassword -d mariadb
+
+how to run with mariadb support
 
 
-docker run -d -p 8000:80 --volumes-from myapp-data --link mariadb iiiepe/nginx-drupal
+docker run -d -p 8000:80 --volumes-from riot-data --link mariadb iiiepe/nginx-drupal
+
+
+last command for debugging
+
+ docker run -i -t -p 8000:80 --volumes-from riot-data --link riot-mariadb iiiepe/nginx-drupal
