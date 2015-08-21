@@ -16,3 +16,8 @@ docker run uname/drupal-data
 it is linked by running 
 
 docker run -d -p 8000:80 --volumes-from myapp-data iiiepe/nginx-drupal
+
+
+
+
+docker run -d -p 8000:80 --volumes-from myapp-data --link mariadb iiiepe/nginx-drupal
