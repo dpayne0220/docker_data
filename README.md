@@ -31,3 +31,6 @@ docker run -d -t -p 8000:80 --volumes-from riot-data --link drupal-maria-d:mysql
 last command for debugging
 
  docker run -i -t -p 8000:80 --volumes-from riot-data --link riot-mariadb iiiepe/nginx-drupal
+ 
+ 
+ make sure to point all instances to the docker ip?
