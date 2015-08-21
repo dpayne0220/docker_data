@@ -20,12 +20,12 @@ docker run -d -p 8000:80 --volumes-from myapp-data iiiepe/nginx-drupal
 
 how to create a mariadb container
 
-docker run --name some-mariadb -e MYSQL_ROOT_PASSWORD=mysecretpassword -d mariadb
+docker run --name drupal-maria -d -p 3306:3306 -e MARIADB_PASS="pass" tutum/mariadb
 
 how to run with mariadb support
 
 
-docker run -d -p 8000:80 --volumes-from riot-data --link mariadb iiiepe/nginx-drupal
+docker run -d -t -p 8000:80 --volumes-from riot-data --link drupal-maria-d:mysql iiiepe/nginx-drupal
 
 
 last command for debugging
