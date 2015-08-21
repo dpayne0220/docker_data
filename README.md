@@ -18,7 +18,7 @@ it is linked by running
 docker run -d -p 8000:80 --volumes-from myapp-data iiiepe/nginx-drupal
 
 
-how to create a mariadb container
+how to create a mariadb container (https://github.com/tutumcloud/mariadb)
 
 docker run --name drupal-maria -d -p 3306:3306 -e MARIADB_PASS="pass" tutum/mariadb
 
