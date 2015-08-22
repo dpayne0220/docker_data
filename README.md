@@ -26,6 +26,8 @@ how to run with mariadb support
 
 
     docker run -d -t -p 8000:80 --volumes-from riot-data --link drupal-maria-d:mysql iiiepe/nginx-drupal
+    
+where dripal-maria-d is the container name of the db container and :mysql is the alias, which will be the host you type in to link to that container http://mysql
 
 
 last command for debugging
